@@ -10,7 +10,6 @@ str.length - и получить её длину)
 4) Потренироваться и переписать цикл еще двумя способами*/
 
 "use strict";
-
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
