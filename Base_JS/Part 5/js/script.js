@@ -49,11 +49,10 @@ promoBg.style.backgroundImage = 'url("img/bg.jpg")';
 
 // 4.
 movieDB.movies.sort();
-console.log(movieDB.movies);
+//console.log(movieDB.movies);
 let spisokFilms = document.querySelector('.promo__interactive-list');
-console.log(spisokFilms);
+//console.log(spisokFilms);
 spisokFilms.innerHTML = "";
-
 movieDB.movies.forEach((film, i) =>{
     spisokFilms.innerHTML += `<li class="promo__interactive-item">${i + 1} ${film}
     <div class="delete"></div>
