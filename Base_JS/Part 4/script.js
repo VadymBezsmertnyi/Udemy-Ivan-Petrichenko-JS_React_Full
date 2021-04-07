@@ -53,16 +53,37 @@ const personalMovieDB = {
             console.log(personalMovieDB);
         }
     },
+    toggleVisibleMyDB: ()=>{
+        if (personalMovieDB.privat){
+            personalMovieDB.privat = false;
+        } else{
+            personalMovieDB.privat = true;
+        }
+    },
     writeYourGenres: () => {
-        for (let i = 0; i < 3; i++) {
-            const genre = prompt(`Ваш любимый жанр под номером ${i+1}`, '');
+        for (let i = 0; i < 1; i++) {
+/*             const genre = prompt(`Ваш любимый жанр под номером ${i+1}`, '');
             if (genre != ' ' && genre != null && genre != ''){
                 personalMovieDB.genres[i] = genre;
                 //alert('Правильно');
             }else{
                 alert('Введите ваш любимый жанр фильмов');
                 i--;
-            }
+            } */
+
+            const genres = prompt(`Введите ваши любимые жанры через запятую`).toLowerCase;
+
+            if (genres != ' ' && genres != null && genres != ''){
+                personalMovieDB.genres = genres.split(', ');
+                personalMovieDB.genres.sort();
+                //alert('Правильно');
+            }else{
+                alert('Введите ваш любимый жанр фильмов');
+                i--;
         }
+    }
+        personalMovieDB.genres.forEach((item, i)=>{
+            console.log(`Любимый жанр ${i+1} - это ${item}`);
+        });
     }
 };
