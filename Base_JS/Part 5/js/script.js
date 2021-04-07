@@ -53,8 +53,9 @@ movieDB.movies.sort();
 let spisokFilms = document.querySelector('.promo__interactive-list');
 //console.log(spisokFilms);
 spisokFilms.innerHTML = "";
-movieDB.movies.forEach((film, i) =>{
-    spisokFilms.innerHTML += `<li class="promo__interactive-item">${i + 1} ${film}
+for (let i = 0; i < movieDB.movies.length; i++) {
+    spisokFilms.innerHTML += `<li class="promo__interactive-item">
+    ${i + 1}. ${movieDB.movies[i]}
     <div class="delete"></div>
     </li>`;
-});
+}
