@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () =>{
           filmInput = document.querySelector('.adding__input'),
           bts = document.querySelector('button');
 
+          
     // 1. I work
     bts.addEventListener('click', (e)=>{
         e.preventDefault();
