@@ -47,15 +47,44 @@ let promoBg = document.querySelector('.promo__bg');
 promoBg.style.backgroundImage = 'url("img/bg.jpg")';
 //promoBg.style.backgroundImage = 'img/bg.jpg';
 
-// 4.
+// 4-5.
 movieDB.movies.sort();
 //console.log(movieDB.movies);
 let spisokFilms = document.querySelector('.promo__interactive-list');
 //console.log(spisokFilms);
 spisokFilms.innerHTML = "";
 for (let i = 0; i < movieDB.movies.length; i++) {
-    spisokFilms.innerHTML += `<li class="promo__interactive-item">
+    spisokFilms.innerHTML = spisokFilms.innerHTML + `<li class="promo__interactive-item">
     ${i + 1}. ${movieDB.movies[i]}
     <div class="delete"></div>
     </li>`;
 }
+
+/* // 1. Ivan working
+const adv = document.querySelectorAll('.promo__adv img'),
+      poster = document.querySelector('.promo__bg'),
+      genre = poster.querySelector('.promo__genre'),
+      movieList = document.querySelector('.promo__interactive-list');
+
+
+adv.forEach(item => {
+    item.remove();
+});
+
+// 2.
+genre.textContent = 'Драма';
+
+// 3.
+poster.style.backgroundImage = 'url("img/bg.jpg")';
+
+// 4+5.
+movieList.innerHTML = "";
+movieDB.movies.sort();
+movieDB.movies.forEach((film, i) =>{
+    movieList.innerHTML += `
+        <li class="promo__interactive-item">${i + 1}. ${movieDB.movies[i]}
+            <div class="delete"></div>
+        </li>
+    `;
+});
+ */
