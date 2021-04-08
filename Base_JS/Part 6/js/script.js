@@ -29,14 +29,29 @@ document.addEventListener("DOMContentLoaded", () =>{
           genre = poster.querySelector('.promo__genre'),
           movieList = document.querySelector('.promo__interactive-list'),
           filmInput = document.querySelector('.adding__input'),
-          bts = document.querySelector('button');
-
+          bts = document.querySelector('button'),
+          chbox = document.querySelector('[type="checkbox"]'),
+          del = document.querySelectorAll('.delete');
           
+
     // 1. I work
     bts.addEventListener('click', (e)=>{
         e.preventDefault();
-        movieDB.movies.push(filmInput.value.toLocaleUpperCase());
-        console.log(filmInput.value);
+
+        let filmInputText = filmInput.value,
+            filmInputTextLength =  filmInputText.length,
+            chboxFavorit = chbox.checked;
+        
+        // 2. I work
+        if (filmInputTextLength > 21){
+            filmInputText = `${filmInputText.substring(0, 21)}...`;
+        }
+        // 4. I work
+        if (chboxFavorit){
+            console.log('Добавляем любимый фильм');
+        }
+
+        movieDB.movies.push(filmInputText.toLocaleUpperCase());
         movieList.innerHTML = "";
         movieDB.movies.sort();
         movieDB.movies.forEach((film, i) =>{
@@ -46,6 +61,8 @@ document.addEventListener("DOMContentLoaded", () =>{
             </li>
         `;
     });
+    // 3. I work
+    
     });
           
 
