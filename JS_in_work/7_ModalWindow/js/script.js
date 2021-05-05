@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Timer
 
-    const deadline = '2021-04-27';
+    const deadline = '2021-08-27';
 
     function getTimeRemaining(endtime) {
         const t = Date.parse(endtime) - Date.parse(new Date()),
@@ -92,4 +92,38 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     setClock('.timer', deadline);
+
+    //Model_Window My work
+
+    const showModal = document.querySelectorAll('[data-model]'),
+          closeModal = document.querySelector('[data-close]'),
+          menuModal = document.querySelector('.modal');
+
+    showModal.forEach(btn => {
+            btn.addEventListener('click', () => {
+            menuModal.classList.toggle('show');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function toggleModal() {
+        menuModal.classList.toggle('show');
+        document.body.style.overflow = '';
+    }
+
+    closeModal.addEventListener('click',toggleModal);
+    
+    //Model_Window Work Ivan Petrichenko
+
+    menuModal.addEventListener('click', (e) =>{
+        if (e.target === menuModal){
+            toggleModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && menuModal.classList.contains('show')){
+            toggleModal();
+        }
+    });
 });
