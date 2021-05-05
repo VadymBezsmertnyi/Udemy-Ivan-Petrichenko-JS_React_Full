@@ -1,0 +1,38 @@
+#panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#logo {
+    width: 5%;
+}
+
+#imgLogo {
+    width: 100%;
+}
+
+#text {
+    width: 10%;
+}
+
+#logoText {
+    margin: 0;
+    width: 100%;
+    color: white;
+    font-style: italic;
+    font-size: 10pt;
+}
+
+input {
+    width: 94%;
+    background-color: black;
+}
+
+#menu {
+    width: 80%;
+}
+
+#imgSearchLogo {
+    width: 10px;
+}
