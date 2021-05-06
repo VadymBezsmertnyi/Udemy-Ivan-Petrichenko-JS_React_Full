@@ -1,0 +1,115 @@
+#choice {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#choiceRepair_1 {
+    display: block;
+    background: url(img/choice/1_Repair.jpg) center ;
+    height: 400px;
+    width: 250px;
+}
+
+div #repair{
+    width: 400px;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+#repairText{
+    margin: 0;
+    font-size: 32px;
+    background:rgba(0, 0, 0, 0.575);
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+#choiceRepair_2 {
+    display: block;
+    background: url(img/choice/2_RemairMetal.jpg) center ;
+    height: 400px;
+    width: 250px;
+}
+
+div #metal{
+    width: 400px;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+#metalText{
+    margin: 0;
+    font-size: 32px;
+    background:rgba(0, 0, 0, 0.575);
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+#choiceRepair_3 {
+    display: block;
+    background: url(img/choice/3_plastic.jpg) center ;
+    height: 400px;
+    width: 250px;
+}
+
+div #plastic{
+    width: 400px;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+#plasticText{
+    margin: 0;
+    font-size: 32px;
+    background:rgba(0, 0, 0, 0.575);
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+#choiceRepair_4 {
+    display: block;
+    background: url(img/choice/4_Sandblasting.jpg) center ;
+    height: 400px;
+    width: 250px;
+}
+
+div #sandblasting{
+    width: 400px;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+#sandblastingText{
+    margin: 0;
+    font-size: 32px;
+    background:rgba(0, 0, 0, 0.575);
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+#choiceRepair_5 {
+    display: block;
+    background: url(img/choice/5_aerographia.jpg) center ;
+    height: 400px;
+    width: 250px;
+}
+
+div #paint{
+    width: 400px;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+#paintText{
+    margin: 0;
+    font-size: 32px;
+    background:rgba(0, 0, 0, 0.575);
+    color: white;
+    font-style: italic;
+    text-align: center;
+}

@@ -5,23 +5,11 @@
 }
 
 #logo {
-    width: 5%;
+    width: 20%;
 }
 
 #imgLogo {
     width: 100%;
-}
-
-#text {
-    width: 10%;
-}
-
-#logoText {
-    margin: 0;
-    width: 100%;
-    color: white;
-    font-style: italic;
-    font-size: 10pt;
 }
 
 input {
