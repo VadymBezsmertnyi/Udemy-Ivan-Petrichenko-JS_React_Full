@@ -1,0 +1,46 @@
+#footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#social_networks {
+    width: 100%;
+    height: 300px;
+}
+
+#social_networks ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 300px;
+    padding: 0;
+}
+
+#social_networks ul li {
+    padding: 5px;
+}
+
+#inst {
+    display: block;
+    background: url(img/soc_icon/ins.jpg) center ;
+    width: 35px;
+    height: 35px;
+}
+
+#fb {
+    display: block;
+    background: url(img/soc_icon/fb.jpg) center ;
+    width: 35px;
+    height: 35px;
+}
+
+#link {
+    display: block;
+    background: url(img/soc_icon/link.png) center ;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+}
