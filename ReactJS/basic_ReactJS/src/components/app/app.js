@@ -18,7 +18,7 @@ class App extends Component {
                 { name: 'Carl W.', salary: 350, increase: false, star: false, id: 3 },
             ],
             term: '',
-            filter: 'all'
+            filter: 'all',
         }
         this.maxId = 4;
     }
@@ -91,6 +91,10 @@ class App extends Component {
         this.setState({filter});
     }
 
+    onEditSalary = (salary) => {
+        console.log('gfgdfgdf');
+    }
+
     render() {
         const {data, term, filter} = this.state;
         const employees = this.state.data.length;
@@ -108,10 +112,11 @@ class App extends Component {
                     <AppFilter filter={filter} onFilterSelect={this.onFilterSelect}/>
                 </div>
 
-                <EmployersList
+                <EmployersList //Вот файл откуда нужно изменить
                     data={visibleData}
                     onDelete={this.deleteItem}
-                    onToggleProp={this.onToggleProp}/>
+                    onToggleProp={this.onToggleProp}
+                    onEditSalary={this.onEditSalary}/>
                 <EmployersAddForm
                     onAdd={this.addItem} />
             </div>
