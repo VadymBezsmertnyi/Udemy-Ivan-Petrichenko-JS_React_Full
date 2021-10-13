@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component} from 'react';
 import './employers-list-item.css';
 
 class EmployersListItem extends Component {
@@ -10,15 +10,15 @@ class EmployersListItem extends Component {
         }
     }
 
-    newSalary = (e) => {
-        this.setState({
-            salary: e.target.value
+    /* newSalary = (e) => {
+        this.setState((props) =>{
+            return {salary: e.target.value}
         });
         console.log(this.props.salary + "=" + this.state.salary);
-    }
+    } */
     
     render() {
-        const { name, salary, onDelete, onToggleProp, increase, star } = this.props
+        const { name, salary, onDelete, onToggleProp, increase, star ,newSalary } = this.props
 
         let classNames = "list-group-item d-flex justify-content-between";
         if (increase) {
@@ -34,7 +34,7 @@ class EmployersListItem extends Component {
                     data-toggle="star">{name}</span>
                 <input type="text" className="list-group-item-input"
                     value={salary + "$"}
-                    onChange={this.newSalary} />
+                    onChange={newSalary} />
                 <div className='d-flex justify-content-center align-items-center'>
                     <button type="button"
                         className="btn-cookie btn-sm "

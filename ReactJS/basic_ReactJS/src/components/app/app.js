@@ -91,8 +91,16 @@ class App extends Component {
         this.setState({filter});
     }
 
-    onEditSalary = (salary) => {
-        console.log('gfgdfgdf');
+    onEditSalary =  (id, prop) => {
+        this.setState(({ data }) => ({
+            data: data.map(item => {
+                if (item.id === id) {
+                    console.log(item);
+                    return { ...item, [prop]: !item[prop] }
+                }
+                return item;
+            })
+        }));
     }
 
     render() {
@@ -112,11 +120,11 @@ class App extends Component {
                     <AppFilter filter={filter} onFilterSelect={this.onFilterSelect}/>
                 </div>
 
-                <EmployersList //Вот файл откуда нужно изменить
+                <EmployersList 
                     data={visibleData}
                     onDelete={this.deleteItem}
                     onToggleProp={this.onToggleProp}
-                    onEditSalary={this.onEditSalary}/>
+                    newSalary={this.onEditSalary}/>
                 <EmployersAddForm
                     onAdd={this.addItem} />
             </div>
