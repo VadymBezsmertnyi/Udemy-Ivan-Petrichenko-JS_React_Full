@@ -92,12 +92,18 @@ class App extends Component {
     }
 
     onEditSalary =  (id, prop) => {
+        const newProps = +prop.replace(/\D+/g,"");
+
         this.setState(({ data }) => ({
             data: data.map(item => {
                 if (item.id === id) {
-                    console.log(item);
-                    return { ...item, [prop]: !item[prop] }
+                    this.setState(
+                        {...item,salary: newProps}
+                    )
+                    console.log(item.salary);
+                    return{ ...item,salary :  newProps}
                 }
+
                 return item;
             })
         }));

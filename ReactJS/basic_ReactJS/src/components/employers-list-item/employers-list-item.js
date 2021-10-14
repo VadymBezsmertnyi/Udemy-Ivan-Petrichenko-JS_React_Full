@@ -9,14 +9,6 @@ class EmployersListItem extends Component {
             salary: ''
         }
     }
-
-    /* newSalary = (e) => {
-        this.setState((props) =>{
-            return {salary: e.target.value}
-        });
-        console.log(this.props.salary + "=" + this.state.salary);
-    } */
-    
     render() {
         const { name, salary, onDelete, onToggleProp, increase, star ,newSalary } = this.props
 
@@ -33,7 +25,7 @@ class EmployersListItem extends Component {
                 <span className="list-group-item-label" onClick={onToggleProp}
                     data-toggle="star">{name}</span>
                 <input type="text" className="list-group-item-input"
-                    value={salary + "$"}
+                    defaultValue={salary + "$"}
                     onChange={newSalary} />
                 <div className='d-flex justify-content-center align-items-center'>
                     <button type="button"
